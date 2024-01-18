@@ -1,15 +1,15 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 # Project information
-site_name: mafuka.txt
+site_name: 光景录
 site_url: https://txt.mafuka.com/
 site_author: Mafuka
 site_description: >-
   Lets tell a story with Mafuka ✨
 
 # Repository
-repo_name: mafuka/txt
-repo_url: https://github.com/mafuka/txt
+# repo_name: mafuka/txt
+# repo_url: https://github.com/mafuka/txt
 
 # Copyright
 copyright: Copyright &copy; 2019 - 2024 Mafuka
@@ -17,7 +17,7 @@ copyright: Copyright &copy; 2019 - 2024 Mafuka
 # Configuration
 theme:
   name: material
-  # custom_dir: material/overrides
+  # custom_dir: overrides
   features:
     - announce.dismiss
     - content.action.edit
@@ -53,14 +53,14 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: brown
-      accent: indigo
+      accent: deep orange
       toggle:
         icon: material/brightness-7
         name: 换为深色
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: brown
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: 跟随系统
@@ -69,16 +69,19 @@ theme:
   #   text: Noto Serif SC
   #   code: Roboto Mono
   font: false
-  # favicon: assets/favicon.png
-  # icon:
-  #   logo: logo
+  favicon: material/comma-circle
+  icon:
+    logo: material/comma-circle
 
 # Plugins
 plugins:
+  - tags:
+      tags_file: archives.md
   - blog:
-      enabled: false
-      blog_dir: txt
+      # enabled: false
+      blog_dir: blog
   - rss:
+      enabled: false
       match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
@@ -103,15 +106,11 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://github.com/mafuka
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:alice@mafuka.com
+    - icon: fontawesome/solid/circle-info
+      link: about
 extra_css:
   - stylesheets/extra.css
 
@@ -167,5 +166,11 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - 莫问: index.md
-  - 记事本: txt/index.md
+  - 序: index.md
+  - 文章:
+    - articles/index.md
+    - Welcome to MkDocs: articles/0.md
+  - 只言: txt.md
+  - 归档: archives.md
+  - 足迹: message.md
+  # - 博客: blog/index.md

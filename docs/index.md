@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+---
+title: ""
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 这里是光景录。
 
-## Commands
+光景录目前共记载 32 篇文章。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+上一次清档于 2023 年 8 月 1 日。
 
-## Project layout
+---
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 只言片语
+
+这里是 [「光景录」](index.md)，一本生活观察日记。
+
+这里只有文字。[「角落」](category/0.md)里的垃圾会被定期倒掉。
+
+偶尔，也会有像你这样的人，迷失在这里，留下了[「足迹」](message.md)。
+
+## 存在证明
+
+<br/>
+**_Fin._**
