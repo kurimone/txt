@@ -1,0 +1,11 @@
+!**/.gitkeep
+__pycache__
+build
+site
+dist
+.cache
+.DS_Store
+TODO
+tmp
+.idea
+*~

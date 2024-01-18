@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Noto Serif SC, serif, Roboto Mono";
+  src:
+    url("https://fonts.googlefonts.cn/css?family=Noto+Serif+SC:wght@500&display=swap"),
+    /*url("https://fonts.googlefonts.cn/css?family=Noto+Serif+SC"),*/
+    url("https://fonts.googlefonts.cn/css?family=Roboto+Mono")
+}
+
+:root {
+  --md-text-font: "Noto Serif SC";
+  --md-code-font: "Roboto Mono";
+}
+
+/*:root, [data-md-color-scheme=default] {*/
+/*   --md-default-bg-color: #F4E7C7;*/
+/*}*/
+
+[data-md-color-scheme="brown"] {
+  --md-accent-fg-color:        #F4E7CF;
+  --md-accent-fg-color--light: #F4E7C7;
+  --md-accent-fg-color--dark:  #F4E7CC;
+}
+
+.md-typeset {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 500;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+}
+
+.md-ellipsis {
+  font-weight: 600;
+}
+
+.md-tabs .md-nav__title .md-nav__item {
+  font-weight: 700;
+}

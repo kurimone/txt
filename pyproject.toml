@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "txt"
+version = "0.1.0"
+description = ""
+authors = ["Mafuka <i@mafuka.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = "^9.5.4"
+mkdocs-minify-plugin = "^0.7.2"
+mkdocs-rss-plugin = "^1.12.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
