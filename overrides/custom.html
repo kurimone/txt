@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<!-- 对于有分类的文章，页面标题追加分类名 -->
+{% block htmltitle %}
+<title>
+  {{ page.title }} - 
+  {% if 'article' in page.meta.type %}
+    {{ page.meta.category | default(config.site_name) }}
+  {% else %}
+    {{ config.site_name }}
+  {% endif %}
+</title>
+{% endblock %}

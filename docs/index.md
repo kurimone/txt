@@ -1,5 +1,6 @@
 ---
-title: ""
+template: custom.html
+type: home
 ---
 
 # 这里是光景录。

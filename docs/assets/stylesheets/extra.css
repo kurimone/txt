@@ -1,54 +1,46 @@
-/* Serif Font */
-
-@font-face {
+/* 自定义字体 */
+/* BUG: 在 Safari 上无效 */
+/* @font-face {
   font-family: "Noto Serif SC, serif, Roboto Mono";
   src:
-    url("https://fonts.googlefonts.cn/css?family=Noto+Serif+SC:wght@500&display=swap"),
-    /*url("https://fonts.googlefonts.cn/css?family=Noto+Serif+SC"),*/
+    url("https://fonts.googlefonts.cn/css?family=Noto+Serif+SC"),
     url("https://fonts.googlefonts.cn/css?family=Roboto+Mono")
 }
-
 :root {
   --md-text-font: "Noto Serif SC";
   --md-code-font: "Roboto Mono";
-}
+} */
 
-/* Font Weight */
-
+/* 微调字重 */
 .md-typeset {
   font-weight: 500;
 }
-
 p {
   font-weight: 500;
 }
-
 .md-typeset h1 {
-  font-weight: 700;
+  font-weight: 600;
 }
-
 .md-typeset h2 {
   font-weight: 600;
 }
-
 .md-ellipsis {
   font-weight: 600;
 }
-
 .md-tabs .md-nav__title .md-nav__item {
   font-weight: 700;
 }
+.md-top {
+  font-weight: 600;
+}
+.md-tooltip {
+  font-weight: 600;
+}
 
-/*.md-typeset .admonition, .md-typeset details {*/
-/*  font-size: .8rem !important;*/
-/*}*/
-
-/* Hide Logo */
-
+/* 隐藏 Logo */
 .md-logo {
   display: none !important;
 }
-
 [dir=ltr] .md-header__title {
   margin-left: 0.5rem;
   /*line-height: 2.4rem !important;*/

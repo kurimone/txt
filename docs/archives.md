@@ -1,3 +1,8 @@
+---
+template: custom.html
+type: archive
+---
+
 # 归档
 
 [2022 年 13 月]() / ∞ 篇
