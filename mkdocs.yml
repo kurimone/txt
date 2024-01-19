@@ -172,11 +172,14 @@ markdown_extensions:
 nav:
     - 序: index.md
     - 只言:
-      - 2019 年 13 月: 2.md  
+      - 2020 年 13 月: 3.md  
+      - 2019 年 13 月: 2.md
     - 幻想家:
       - 关于: 1.md
+      - 十三月: 4.md
+      - 雾岛蓝花: 6.md
     - 角落:
       - Welcome to MkDocs: 0.md
     - 归档:
       - 2019 年 13 月: archives.md
-    - 足迹: comment.md
+    - 徘徊: comment.md
