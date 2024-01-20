@@ -138,7 +138,7 @@ extra_css:
 # Additional javascript
 extra_javascript:
   - assets/javascripts/image-grid.js
-  - assets/javascripts/single-image-width-limit.js
+  # - assets/javascripts/single-image-width-limit.js
 
 # Extensions
 markdown_extensions:
