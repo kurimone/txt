@@ -1,0 +1,18 @@
+/* 根据横竖比例为单图设置不同的宽度限制 */
+.single-image img {
+    height: auto;
+    width: auto;
+    max-width: 400px;
+}
+
+.single-image img.portrait {
+    max-width: 300px;
+}
+
+.single-image img.landscape {
+    max-width: 400px;
+}
+
+.single-image img.square {
+    max-width: 400px;
+}

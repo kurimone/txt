@@ -12,7 +12,7 @@ site_description: >-
 # repo_url: https://github.com/mafuka/txt
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2024 Mafuka
+copyright: 版权所有 &copy; 2019 - 2024 枫佳爱丽丝
 
 # Configuration
 theme:
@@ -97,26 +97,48 @@ plugins:
         - en
       # separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
-      enabled: true
       minify_html: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      # skip_classes:
+      #   - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
 
 # Additional configuration
 extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mafuka
     - icon: fontawesome/solid/paper-plane
       link: mailto:alice@mafuka.com
+  generator: false
 
-# Additional stylesheets
+# Additional stylesheet
 extra_css:
-  - assets/stylesheets/extra.css
+  - assets/stylesheets/font-weight.css
+  - assets/stylesheets/hide-logo.css
+  - assets/stylesheets/hide-empty-table-head.css
+  - assets/stylesheets/image-grid.css
+  - assets/stylesheets/single-image-width-limit.css
+
+# Additional javascript
+extra_javascript:
+  - assets/javascripts/image-grid.js
+  - assets/javascripts/single-image-width-limit.js
 
 # Extensions
 markdown_extensions:
@@ -172,14 +194,14 @@ markdown_extensions:
 nav:
     - 序: index.md
     - 只言:
-      - 2020 年 13 月: 3.md  
-      - 2019 年 13 月: 2.md
+      - 3.md  
+      - 2.md
     - 幻想家:
-      - 关于: 1.md
-      - 十三月: 4.md
-      - 雾岛蓝花: 6.md
-    - 角落:
-      - Welcome to MkDocs: 0.md
-    - 归档:
-      - 2019 年 13 月: archives.md
-    - 徘徊: comment.md
+      - 1.md
+      - 4.md
+      - 6.md
+    - 废纸篓:
+      - 0.md
+    - 归档: archives.md
+    - 足迹: comment.md
+  

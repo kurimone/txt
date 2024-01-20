@@ -1,0 +1,4 @@
+/* 隐藏空表头 */
+table > thead:has(> tr > th:empty):not(:has(> tr > th:not(:empty))) {
+  display: none;
+}

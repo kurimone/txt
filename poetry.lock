@@ -391,6 +391,17 @@ i18n = ["babel (>=2.9.0)"]
 min-versions = ["babel (==2.9.0)", "click (==7.0)", "colorama (==0.4)", "ghp-import (==1.0)", "importlib-metadata (==4.3)", "jinja2 (==2.11.1)", "markdown (==3.2.1)", "markupsafe (==2.0.1)", "mergedeep (==1.3.4)", "packaging (==20.5)", "pathspec (==0.11.1)", "platformdirs (==2.2.0)", "pyyaml (==5.1)", "pyyaml-env-tag (==0.1)", "typing-extensions (==3.10)", "watchdog (==2.0)"]
 
 [[package]]
+name = "mkdocs-glightbox"
+version = "0.3.6"
+description = "MkDocs plugin supports image lightbox with GLightbox."
+optional = false
+python-versions = "*"
+files = [
+    {file = "mkdocs-glightbox-0.3.6.tar.gz", hash = "sha256:f46c675e20793d11c9fc29c9420dfb160ee1d8cfbf4782e82d006f953e19a14c"},
+    {file = "mkdocs_glightbox-0.3.6-py3-none-any.whl", hash = "sha256:15310edfa1cf25cf483068932588f87ceb875148994431df1ee2c5aa03632db1"},
+]
+
+[[package]]
 name = "mkdocs-material"
 version = "9.5.4"
 description = "Documentation that simply works"
@@ -849,4 +860,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "de806e41b290c336fdad6b4befaaf405d0b0f11f2e9ce7ee77f86dd20c3837d7"
+content-hash = "217c4b097659bbee8ec28dc3a7fb46871d36103ccbe564aa076747604c9902a2"

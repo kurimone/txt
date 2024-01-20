@@ -1,6 +1,9 @@
 ---
 template: custom.html
 type: comment
+comments: true
 ---
 
-# 徘徊
+# 足迹
+
+在评论区留下你的脚印。故事未完待续。
