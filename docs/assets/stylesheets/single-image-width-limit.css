@@ -1,6 +1,0 @@
-/* 单图设宽 */
-.single-image img {
-    height: auto;
-    width: auto;
-    max-width: 300px;
-}

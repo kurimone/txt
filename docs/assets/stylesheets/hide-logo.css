@@ -1,8 +1,0 @@
-/* 隐藏 Logo */
-.md-logo {
-  display: none !important;
-}
-[dir=ltr] .md-header__title {
-  margin-left: 0.5rem;
-  /*line-height: 2.4rem !important;*/
-}
