@@ -7,17 +7,17 @@
 :root {
   --md-text-font: 'Noto Sans';
 } */
-@font-face {
+/* @font-face {
   font-family: 'Noto Serif SC';
   src: 
     url("https://fonts.font.im/css?family=Noto+Serif+SC");
 }
 :root {
   --md-text-font: 'Noto Serif SC';
-}
+} */
 
 /* 微调字重 */
-.md-typeset {
+/* .md-typeset {
   font-weight: 500;
 }
 p {
@@ -43,7 +43,7 @@ p {
 }
 strong {
   font-weight: bold;
-}
+} */
 
 /* 自定义颜色 */
 :root {

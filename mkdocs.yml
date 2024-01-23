@@ -66,9 +66,9 @@ theme:
         name: 换为深色
 
   language: zh
-  # font:
-  #   text: Noto Serif SC
-  #   code: Roboto Mono
+  font:
+    text: Noto Sans SC
+    code: Roboto Mono
   favicon: material/comma-circle
   icon:
     logo: material/comma-circle
