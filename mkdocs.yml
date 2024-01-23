@@ -77,7 +77,7 @@ theme:
 # Plugins
 plugins:
   - tags:
-      enabled: true
+      enabled: false
       tags_file: archives.md
   - blog:
       enabled: false
@@ -111,6 +111,9 @@ plugins:
       #   - custom-skip-class-name
       auto_caption: false
       caption_position: bottom
+  - redirects:
+      redirect_maps:
+        "parawiki/index.md": "parawiki/comming-soon.md"
 
 # Additional configuration
 extra:
@@ -134,11 +137,12 @@ extra_css:
   - assets/stylesheets/hide-empty-table-head.css
   - assets/stylesheets/image-grid.css
   - assets/stylesheets/single-image-width-limit.css
+  - assets/stylesheets/video-lightbox.css
+  - assets/stylesheets/admonition-font-size.css
 
 # Additional javascript
 extra_javascript:
-  - assets/javascripts/image-grid.js
-  # - assets/javascripts/single-image-width-limit.js
+  - assets/javascripts/video-lightbox.js
 
 # Extensions
 markdown_extensions:
@@ -192,16 +196,20 @@ markdown_extensions:
 
 # Page tree
 nav:
-    - 序: index.md
-    - 只言:
-      - 3.md  
-      - 2.md
-    - 幻想家:
-      - 1.md
-      - 4.md
-      - 6.md
-    - 废纸篓:
-      - 0.md
-    - 归档: archives.md
-    - 足迹: comment.md
-  
+  - 序: index.md
+  - 无厘头:
+      - 只言:
+          - txt/10.md
+          - txt/9.md
+          - txt/8.md
+          - txt/7.md
+          - txt/2.md
+      - 幻想家:
+          - txt/4.md
+          - txt/6.md
+      - 废纸篓:
+          - txt/1.md
+      - 足迹: txt/comment.md
+  - 学园百科:
+      - parawiki/comming-soon.md
+      - parawiki/message.md

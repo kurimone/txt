@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 
-<!-- 对于有分类的文章，页面标题追加分类名 -->
+{% macro title_with_suffix(suffix) %}
+    {{ page.title }} · {{ suffix }}
+{% endmacro %}
+
+{% macro title_for_index(name) %}
+    {{ name }} · {{ config.site_name }}
+{% endmacro %}
+
+<!-- 对于站点主页、分区主页和有分区的文章，分别设置页面标题 -->
 {% block htmltitle %}
 <title>
-  {{ page.title }} - 
-  {% if 'article' in page.meta.type %}
-    {{ page.meta.category | default(config.site_name) }}
-  {% else %}
-    {{ config.site_name }}
-  {% endif %}
+    {% set is_section = 'section' in page.meta %}
+    {% set is_index = 'index' in page.meta.type if is_section %}
+    
+    {# 对于站点主页 #}
+    {% if is_section and is_index and config.site_name in page.meta.section %}
+        这里是光景录
+    {# 对于分区主页 #}
+    {% elif is_section and is_index %}
+        {{ title_for_index(page.meta.section) }}
+    {# 对于有分区的文章 #}
+    {% elif is_section and not is_index %}
+        {{ title_with_suffix(page.meta.section | default(config.site_name)) }}
+    {% endif %}
 </title>
 {% endblock %}

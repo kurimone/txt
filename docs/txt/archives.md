@@ -1,5 +1,6 @@
 ---
 template: custom.html
+section: 无厘头
 type: archive
 ---
 
