@@ -39,8 +39,9 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           if [ -d "${{ secrets.SERVER_PATH }}/txt" ]; then
-            cd "${{ secrets.SERVER_PATH }}/txt"
-            git pull
+            cd "${{ secrets.SERVER_PATH }}/txt";
+            git pull;
           else
-            cd "${{ secrets.SERVER_PATH }}"
-            git clone -b gh-pages https://github.com/mafuka/txt.git
+            cd "${{ secrets.SERVER_PATH }}";
+            git clone -b gh-pages https://github.com/mafuka/txt.gitl
+          fi
