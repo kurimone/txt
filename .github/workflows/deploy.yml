@@ -40,7 +40,7 @@ jobs:
         script: |
           if [ -d "${{ secrets.SERVER_PATH }}/txt" ]; then
             echo "Directory exists. Removing and recloning."
-            rm -rf "***/txt"
+            rm -rf "${{ secrets.SERVER_PATH }}/txt"
           fi
           cd "${{ secrets.SERVER_PATH }}";
           git clone -b gh-pages https://github.com/mafuka/txt.git
