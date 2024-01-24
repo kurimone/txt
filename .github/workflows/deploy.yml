@@ -1,0 +1,51 @@
+name: Deploy Documentation
+
+on:
+  create:
+    branches:
+      - 'release-*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install poetry
+        poetry install
+
+    - name: Build site with MkDocs
+      run: poetry run mkdocs build
+
+    - name: Package site folder
+      run: tar -czf site.tar.gz -C site .
+
+    - name: Archive production artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: site
+        path: site.tar.gz
+
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DEPLOY_SERVER }}
+        username: ${{ secrets.DEPLOY_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          scp ${{ github.workspace }}/site.tar.gz ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.DEPLOY_PATH }}
+          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }} 'bash -s' <<EOF
+          cd ${{ secrets.DEPLOY_PATH }}
+          tar -xzf site.tar.gz
+          rm -rf index
+          mv site index
+          rm site.tar.gz
+          EOF

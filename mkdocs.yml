@@ -8,8 +8,9 @@ site_description: >-
   Lets tell a story with Mafuka ✨
 
 # Repository
-# repo_name: mafuka/txt
-# repo_url: https://github.com/mafuka/txt
+repo_name: mafuka/txt
+repo_url: https://github.com/mafuka/txt
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright: 版权所有 &copy; 2019 - 2024 枫佳爱丽丝
@@ -21,7 +22,7 @@ theme:
   features:
     - announce.dismiss
     - content.action.edit
-    - content.action.view
+    # - content.action.view
     - content.code.annotate
     - content.code.copy
     # - content.code.select
@@ -119,9 +120,9 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  # analytics:
-  #   provider: google
-  #   property: !ENV GOOGLE_ANALYTICS_KEY
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mafuka
