@@ -40,8 +40,8 @@ jobs:
         script: |
           if [ -d "${{ secrets.SERVER_PATH }}/txt" ]; then
             cd "${{ secrets.SERVER_PATH }}/txt";
-            git pull;
+            git pull origin gh-pages --allow-unrelated-histories
           else
             cd "${{ secrets.SERVER_PATH }}";
-            git clone -b gh-pages https://github.com/mafuka/txt.gitl
+            git clone -b gh-pages https://github.com/mafuka/txt.git
           fi
