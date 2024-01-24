@@ -39,9 +39,8 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           if [ -d "${{ secrets.SERVER_PATH }}/txt" ]; then
-            cd "${{ secrets.SERVER_PATH }}/txt";
-            git pull origin gh-pages --allow-unrelated-histories
-          else
-            cd "${{ secrets.SERVER_PATH }}";
-            git clone -b gh-pages https://github.com/mafuka/txt.git
+            echo "Directory exists. Removing and recloning."
+            rm -rf "***/txt"
           fi
+          cd "${{ secrets.SERVER_PATH }}";
+          git clone -b gh-pages https://github.com/mafuka/txt.git
