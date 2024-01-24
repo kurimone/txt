@@ -1,56 +1,42 @@
-name: Deploy Documentation
+name: Deploy Docs
 
 on:
+  push:
+    branches:
+      - release
   create:
     branches:
-      - "release-*"
+      - 'release-*'
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.11"
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install poetry
+        poetry install
 
-      - name: Install dependencies
-        run: |
-          pip install poetry
-          poetry install
+    - name: Deploy to GitHub Pages
+      run: poetry run mkdocs gh-deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build site with MkDocs
-        run: poetry run mkdocs build
-
-      - name: Package site folder
-        run: tar -czf site.tar.gz -C site .
-
-      - name: Archive production artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: site
-          path: site.tar.gz
-
-      - name: Add SSH key to known hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.DEPLOY_SERVER }} >> ~/.ssh/known_hosts
-
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DEPLOY_SERVER }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            scp -vvv ${{ github.workspace }}/site.tar.gz ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.DEPLOY_PATH }}
-            ssh -vvv ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }} 'bash -s' <<EOF
-            cd ${{ secrets.DEPLOY_PATH }}
-            tar -xzf site.tar.gz
-            rm -rf index
-            mv site index
-            rm site.tar.gz
-            EOF
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        port: ${{ secrets.SERVER_PORT }}
+        script: |
+          cd ${{ secrets.SERVER_PATH }}
+          git clone -b gh-pages https://github.com/mafuka/txt.git
