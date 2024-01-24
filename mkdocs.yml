@@ -65,7 +65,6 @@ theme:
       toggle:
         icon: material/brightness-auto
         name: 换为深色
-
   language: zh
   font:
     text: Noto Sans SC
@@ -114,6 +113,11 @@ plugins:
   - redirects:
       redirect_maps:
         "parawiki/index.md": "parawiki/comming-soon.md"
+  - git-revision-date-localized:
+      enabled: true
+      type: date
+      timezone: Asia/Shanghai
+      locale: zh
 
 # Additional configuration
 extra:
@@ -132,11 +136,11 @@ extra:
 
 # Additional stylesheet
 extra_css:
-  - assets/stylesheets/custom.css
+  - assets/stylesheets/extra.css
 
 # Additional javascript
-# extra_javascript:
-#   - assets/javascripts/video-lightbox.js
+extra_javascript:
+  - assets/javascripts/extra.js
 
 # Extensions
 markdown_extensions:
@@ -201,6 +205,7 @@ nav:
       - 幻想家:
           - txt/4.md
           - txt/6.md
+          - txt/11.md
       - 足迹: txt/comment.md
   - 学园百科:
       - parawiki/comming-soon.md
