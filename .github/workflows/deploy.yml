@@ -41,8 +41,8 @@ jobs:
         username: ${{ secrets.DEPLOY_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          scp ${{ github.workspace }}/site.tar.gz ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.DEPLOY_PATH }}
-          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }} 'bash -s' <<EOF
+          scp -vvv ${{ github.workspace }}/site.tar.gz ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.DEPLOY_PATH }}
+          ssh -vvv ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_SERVER }} 'bash -s' <<EOF
           cd ${{ secrets.DEPLOY_PATH }}
           tar -xzf site.tar.gz
           rm -rf index
