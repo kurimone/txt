@@ -1,12 +1,12 @@
 /* 自定义字体 */
-/* @font-face {
+@font-face {
   font-family: 'Noto Sans';
   src: 
     url("https://fonts.font.im/css?family=Noto+Sans");
 }
 :root {
   --md-text-font: 'Noto Sans';
-} */
+}
 /* @font-face {
   font-family: 'Noto Serif SC';
   src: 
