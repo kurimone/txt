@@ -111,8 +111,8 @@ plugins:
       auto_caption: false
       caption_position: bottom
   - redirects:
-      redirect_maps:
-        "parawiki/index.md": "parawiki/comming-soon.md"
+      # redirect_maps:
+      #   "parawiki/index.md": "parawiki/comming-soon.md"
   - git-revision-date-localized:
       enabled: true
       type: date
@@ -203,4 +203,5 @@ nav:
     - 7.md
     - 2.md
   - 学园百科:
-      - parawiki/comming-soon.md
+    - 学园百科.md
+    - 回收站委员会.md
