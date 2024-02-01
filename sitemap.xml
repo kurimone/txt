@@ -2,72 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://txt.mafuka.com/</loc>
-         <lastmod>2024-01-24</lastmod>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/10/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/2/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/7/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/8/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/9/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://txt.mafuka.com/comment/</loc>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://txt.mafuka.com/parawiki/</loc>
-         <lastmod>2024-01-24</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://txt.mafuka.com/parawiki/comming-soon/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/10/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/11/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/2/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/4/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/6/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/7/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/8/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/9/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/archives/</loc>
-         <lastmod>2024-01-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://txt.mafuka.com/txt/comment/</loc>
-         <lastmod>2024-01-24</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
