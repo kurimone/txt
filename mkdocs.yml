@@ -13,7 +13,7 @@ repo_url: https://github.com/mafuka/txt
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: 版权所有 &copy; 2019 - 2024 枫佳爱丽丝
+copyright: Copyright &copy; 2019 - 2024 Mafuka.
 
 # Configuration
 theme:
@@ -132,7 +132,7 @@ extra:
       link: https://github.com/mafuka
     - icon: fontawesome/solid/paper-plane
       link: mailto:alice@mafuka.com
-  generator: false
+  generator: true
 
 # Additional stylesheet
 extra_css:
@@ -195,17 +195,12 @@ markdown_extensions:
 # Page tree
 nav:
   - 序: index.md
-  - 无厘头:
-      - 只言:
-          - txt/10.md
-          - txt/9.md
-          - txt/8.md
-          - txt/7.md
-          - txt/2.md
-      - 幻想家:
-          - txt/4.md
-          - txt/6.md
-          - txt/11.md
-      - 足迹: txt/comment.md
+  - 留言板: comment.md
+  - 只言:
+    - 10.md
+    - 9.md
+    - 8.md
+    - 7.md
+    - 2.md
   - 学园百科:
       - parawiki/comming-soon.md
