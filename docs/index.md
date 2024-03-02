@@ -7,7 +7,7 @@ hide: toc
 
 # 这里是光景录。
 
-光景录目前共记载 104 篇文章。
+光景录目前共记载 32 篇文章。
 
 上一次更新于 {{ git_revision_date_localized }}。
 
