@@ -1,6 +1,5 @@
 ---
 template: custom.html
-section: 光景录
 type: index
 hide: toc
 ---

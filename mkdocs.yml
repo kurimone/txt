@@ -2,18 +2,18 @@
 
 # Project information
 site_name: 光景录
-site_url: https://txt.mafuka.com/
-site_author: Mafuka
+site_url: https://txt.mone.moe/
+site_author: 百音
 site_description: >-
-  Lets tell a story with Mafuka ✨
+  Lets tell a story with Mone ✨
 
 # Repository
-repo_name: mafuka/txt
-repo_url: https://github.com/mafuka/txt
-edit_uri: edit/main/docs/
+# repo_name: txt
+# repo_url: https://github.com/kurimone/txt
+# edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2024 Mafuka.
+copyright: 版权所有 &copy; 2019 - 2025 百音.
 
 # Configuration
 theme:
@@ -26,6 +26,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     # - content.code.select
+    # - content.footnote.tooltips
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
@@ -49,15 +50,11 @@ theme:
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: custom
-      accent: custom
       toggle:
         icon: material/brightness-4
         name: 换为浅色
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      accent: custom
+      scheme: light
       toggle:
         icon: material/brightness-7
         name: 跟随系统
@@ -67,7 +64,7 @@ theme:
         name: 换为深色
   language: zh
   font:
-    text: Noto Sans SC
+    text: Noto Serif SC
     code: Roboto Mono
   favicon: material/comma-circle
   icon:
@@ -110,9 +107,9 @@ plugins:
       #   - custom-skip-class-name
       auto_caption: false
       caption_position: bottom
-  - redirects:
-      # redirect_maps:
-      #   "parawiki/index.md": "parawiki/comming-soon.md"
+  # - redirects:
+  #     redirect_maps:
+  #       "parawiki/index.md": "parawiki/comming-soon.md"
   - git-revision-date-localized:
       enabled: true
       type: date
@@ -129,10 +126,10 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mafuka
+      link: https://github.com/kurimone
     - icon: fontawesome/solid/paper-plane
-      link: mailto:alice@mafuka.com
-  generator: true
+      link: mailto:m@mone.moe
+  generator: false
 
 # Additional stylesheet
 extra_css:
@@ -170,7 +167,7 @@ markdown_extensions:
   - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: mafuka
+      user: KURiMONE
       repo: txt
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -195,13 +192,10 @@ markdown_extensions:
 # Page tree
 nav:
   - 序: index.md
-  - 留言板: comment.md
-  - 只言:
-    - 10.md
-    - 9.md
-    - 8.md
-    - 7.md
-    - 2.md
-  - 学园百科:
-    - 学园百科.md
-    - 回收站委员会.md
+  # - 留言板: comment.md
+  # - 只言:
+  #   - 10.md
+  #   - 9.md
+  #   - 8.md
+  #   - 7.md
+  #   - 2.md
