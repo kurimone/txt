@@ -37,9 +37,18 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          if [ -d "${{ secrets.SERVER_PATH }}" ]; then
-            echo "Directory exists. Removing and recloning."
-            rm -rf "${{ secrets.SERVER_PATH }}"
+          SERVER_PATH="${{ secrets.SERVER_PATH }}"
+          REPO_URL="https://github.com/kurimone/txt.git"
+          
+          if [ -d "$SERVER_PATH/.git" ]; then
+            echo "🔄 Repository exists, updating..."
+            cd "$SERVER_PATH"
+            git reset --hard HEAD
+            git pull
+          else
+            echo "🆕 Cloning new repository..."
+            mkdir -p "$(dirname "$SERVER_PATH")"
+            git clone "$REPO_URL" "$SERVER_PATH"
           fi
-          cd "${{ secrets.SERVER_PATH }}";
-          git clone -b gh-pages https://github.com/kurimone/txt.git
+
+          chmod -R 755 "$SERVER_PATH"
