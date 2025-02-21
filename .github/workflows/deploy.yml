@@ -49,6 +49,7 @@ jobs:
           else
             echo "🆕 Cloning new repository..."
             mkdir -p "$(dirname "$SERVER_PATH")"
+            rm -rf "$SERVER_PATH"/*
             git clone -b "$REPO_BRANCH" "$REPO_URL" "$SERVER_PATH"
           fi
 
