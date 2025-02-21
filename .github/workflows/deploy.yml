@@ -39,6 +39,7 @@ jobs:
         script: |
           SERVER_PATH="${{ secrets.SERVER_PATH }}"
           REPO_URL="https://github.com/kurimone/txt.git"
+          REPO_BRANCH="gh-pages"
           
           if [ -d "$SERVER_PATH/.git" ]; then
             echo "🔄 Repository exists, updating..."
@@ -48,7 +49,7 @@ jobs:
           else
             echo "🆕 Cloning new repository..."
             mkdir -p "$(dirname "$SERVER_PATH")"
-            git clone "$REPO_URL" "$SERVER_PATH"
+            git clone -b "$REPO_BRANCH" "$REPO_URL" "$SERVER_PATH"
           fi
 
           chmod -R 755 "$SERVER_PATH"
