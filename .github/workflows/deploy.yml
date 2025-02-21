@@ -37,9 +37,9 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          if [ -d "${{ secrets.SERVER_PATH }}/txt" ]; then
+          if [ -d "${{ secrets.SERVER_PATH }}" ]; then
             echo "Directory exists. Removing and recloning."
-            rm -rf "${{ secrets.SERVER_PATH }}/txt"
+            rm -rf "${{ secrets.SERVER_PATH }}"
           fi
           cd "${{ secrets.SERVER_PATH }}";
-          git clone -b gh-pages https://github.com/mafuka/txt.git
+          git clone -b gh-pages https://github.com/kurimone/txt.git
